@@ -10,5 +10,15 @@ services:
       POSTGRES_DB: nest
     networks:
       - nest-bookmark
+  test-db:
+    image: postgres:13
+    ports:
+      - 5435:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nest
+    networks:
+      - nest-bookmark
 networks:
   nest-bookmark:
