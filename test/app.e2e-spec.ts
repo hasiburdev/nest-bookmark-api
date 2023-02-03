@@ -29,7 +29,6 @@ describe('App end to end test', () => {
   afterAll(() => {
     app.close();
   });
-
   describe('Auth', () => {
     const dto: AuthDto = { email: 'test@test.com', password: '123456' };
     describe('SignUp', () => {
